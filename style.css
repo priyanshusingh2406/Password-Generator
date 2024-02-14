@@ -197,6 +197,7 @@ h1{
 }
 
 .slider::-webkit-slider-thumb{
+    position: relative;
     appearance: none;
     height: 2rem;
     width: 2rem;
@@ -212,4 +213,30 @@ h1{
     outline: 3px solid var(--vb-yellow);
     background-color: var(--lt-violet);
     box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.60);
+}
+
+.copyBtn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.tooltip{
+    position: absolute;
+    background-color: var(--vb-violet);
+    color: var(--vb-yellow);
+    font-size: 1.25rem;
+    top: 35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
 }
